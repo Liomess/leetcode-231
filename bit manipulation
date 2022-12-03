@@ -1,0 +1,15 @@
+class Solution:
+    def isPowerOfTwo(self, n: int) -> bool:
+        if n<=0:
+            return False
+        num=bin(n)
+        l=len(num)
+        s=num[2:]
+        
+        c=0
+        for i in range(l-2):
+            if s[i]=="1":
+                c+=1
+        if c==1:
+            return True
+        return False
